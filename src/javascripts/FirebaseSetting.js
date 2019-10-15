@@ -1,4 +1,7 @@
 import * as firebase from 'firebase';
+import flamelink from 'flamelink/app';
+import 'flamelink/content';
+import 'flamelink/storage';
 
 const firebaseConfig = {
 	apiKey: process.env.REACT_APP_API_KEY, // required
@@ -10,3 +13,9 @@ const firebaseConfig = {
 };
 
 export const firebaseApp = firebase.initializeApp(firebaseConfig);
+export const app = flamelink({
+	firebaseApp,
+	env: 'production',
+	locale: 'en-US',
+	dbType: 'cf'
+})

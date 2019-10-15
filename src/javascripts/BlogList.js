@@ -7,8 +7,9 @@ import { Link } from 'react-router-dom';
 class BlogList extends React.Component {
 	render() {
 		return (
-			<div>
-				{ Object.keys(this.props.contents).map((item) =>
+			<div className='RightContent'>
+				<div className='Content'>
+					{ Object.keys(this.props.contents).map((item) =>
 						<div key={item}>
 							<Card>
 								<CardContent>
@@ -21,12 +22,13 @@ class BlogList extends React.Component {
 								</CardContent>
 								<CardActions>
 									<Button size='small'>
-										<Link to='/blog/content'>詳細</Link>
+										<Link to={ `/blog/content/${item}` }>詳細</Link>
 									</Button>
 								</CardActions>
 							</Card>
 						</div>
 					) }
+				</div>
 			</div>
 		)
 	};

@@ -1,9 +1,6 @@
 import React from 'react';
 import '../css/RightContent.css';
-import { firebaseApp } from './FirebaseSetting'
-import flamelink from 'flamelink/app';
-import 'flamelink/content';
-import 'flamelink/storage';
+import { app } from './FirebaseSetting'
 import { Route, Switch } from 'react-router-dom';
 import BlogList from './BlogList';
 import BlogContent from './BlogContent';
@@ -12,14 +9,9 @@ class Blog extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			app: flamelink({
-				firebaseApp,
-      	env: 'production',
-      	locale: 'en-US',
-      	dbType: 'cf'
-			}),
 			contents: ''
 		};
+		this.getFlamelinkData = this.getFlamelinkData.bind(this);
 	}
 
 	componentDidMount() {
@@ -28,7 +20,7 @@ class Blog extends React.Component {
 	}
 
 	async getFlamelinkData() {
-		const content = await this.state.app.content.get({
+		const content = await app.content.get({
 			schemaKey: 'content',
 			fields: ['title', 'date']
 		});
@@ -36,25 +28,23 @@ class Blog extends React.Component {
 	
 		this.setState({
 			contents: content
-		})
+		});
 	}
 
 	render() {
 		return(
-			<div className='RightContent'>
-				<div className='Content'>
-					<Switch>
-						<Route
-							path='/blog/list'
-							render={()=> <BlogList contents={ this.state.contents }/>}
-						/>
-						<Route
-							path='/blog/content'
-							render={()=> <BlogContent contentname={ this.props.contentname } />}
-						/>
-					</Switch>
-				</div>
-			</div>
+			<Switch>
+				<Route
+					path='/blog/list'
+					render={()=> <BlogList
+						contents={ this.state.contents }
+					/>}
+				/>
+				<Route
+					path='/blog/content/:item'
+					component={BlogContent}
+				/>
+			</Switch>
 		)
 	};
 }
