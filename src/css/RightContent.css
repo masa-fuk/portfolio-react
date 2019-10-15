@@ -1,0 +1,58 @@
+.RightContent {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+ul {
+	padding: 0;
+	list-style: none;
+}
+
+.Top ul {
+	font-size: 32px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.Top li {
+	padding: 10px 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:visited {
+	color: black;
+}
+
+.Content {
+	text-align: center;
+}
+
+@media screen and (max-width: 559px){ /* Phone */
+	.RightContent {
+		width: 100vw;
+	}
+	.Content {
+		padding: 0 15px;
+	}
+}
+@media screen and (min-width: 560px) and (max-width: 1023px){ /* Tab */
+	.RightContent {
+		width: 100vw;
+	}
+	.Content {
+		width: 85%;
+	}
+}
+@media screen and (min-width: 1024px){ /* PC */
+	.RightContent {
+		width: 70vw;
+	}
+	.Content {
+		width: 75%;
+	}
+}

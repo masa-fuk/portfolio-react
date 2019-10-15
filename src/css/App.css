@@ -1,0 +1,15 @@
+.App {
+  width: 100vw;
+  display: flex;
+}
+
+@media screen and (max-width: 1024px){ /* Phone, Tab */
+  .App {
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 1024px){ /* PC */
+  .App {
+    flex-direction: row;
+  }
+}
