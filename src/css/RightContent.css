@@ -1,4 +1,5 @@
 .RightContent {
+  background-color: #F4F5F7;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13,11 +14,11 @@ ul {
 .Top ul {
   font-size: 32px;
   font-weight: bold;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .Top li {
-  padding: 10px 0;
+  padding: 20px 0;
 }
 
 a {
@@ -29,29 +30,35 @@ a:visited {
   color: black;
 }
 
-.Content {
-  text-align: center;
-}
-
 @media screen and (max-width: 559px){ /* Phone */
   .RightContent {
     width: 100vw;
+    margin-top: 15vh;
   }
   .Content {
     padding: 0 15px;
+  }
+  .Top {
+    text-align: center;
   }
 }
 @media screen and (min-width: 560px) and (max-width: 1023px){ /* Tab */
   .RightContent {
     width: 100vw;
+    margin-top: 15vh;
   }
   .Content {
     width: 85%;
+  }
+  .Top {
+    text-align: center;
   }
 }
 @media screen and (min-width: 1024px){ /* PC */
   .RightContent {
     width: 70vw;
+    min-height: 100vh;
+    margin-left: 30vw;;
   }
   .Content {
     width: 75%;

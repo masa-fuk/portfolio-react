@@ -9,8 +9,10 @@ class Contact extends React.Component {
   render() {
     return (
       <div className='RightContent'>
-        <h2>Mail</h2>
-        <p>purizun7610@gmail.com</p>
+        <div className='Content'>
+          <h2>Mail</h2>
+          <p>purizun7610@gmail.com</p>
+        </div>
       </div>
     )
   };

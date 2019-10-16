@@ -14,7 +14,7 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      leftTitleName: 'Okazaki Masahiro',
+      leftTitleName: 'Masahiro OKAZAKI',
     }
     this.onChangeName = this.onChangeName.bind(this);
   };

@@ -1,6 +1,6 @@
 import React from 'react';
 import '../css/RightContent.css'
-import { Card, CardContent, Typography, CardActions, Button } from '@material-ui/core';
+import { Card, CardContent, Typography} from '@material-ui/core';
 import { Link } from 'react-router-dom';
 
 
@@ -11,21 +11,18 @@ class BlogList extends React.Component {
         <div className='Content'>
           { Object.keys(this.props.contents).map((item) =>
             <div key={item}>
+              <Link to={ `/blog/content/${item}` }>
               <Card>
                 <CardContent>
                   <Typography>
                     { this.props.contents[item].date }
                   </Typography>
-                  <Typography>
+                  <Typography variant='h4'>
                     { this.props.contents[item].title }
                   </Typography>
                 </CardContent>
-                <CardActions>
-                  <Button size='small'>
-                    <Link to={ `/blog/content/${item}` }>詳細</Link>
-                  </Button>
-                </CardActions>
               </Card>
+              </Link>
             </div>
           ) }
         </div>

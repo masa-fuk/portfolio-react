@@ -6,7 +6,7 @@ class BlogContent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      contents: ''
+      content: '',
     };
     this.getFlamelinkOnceData = this.getFlamelinkOnceData.bind(this);
   }
@@ -17,14 +17,14 @@ class BlogContent extends React.Component {
 
   async getFlamelinkOnceData() {
     const { item } = this.props.match.params;
-    const content = await app.content.get({
+    const downloadContent = await app.content.get({
       schemaKey: 'content',
       entryId: item
     });
-    console.log(content);
-
+    console.log(downloadContent);
+    
     this.setState({
-      contents: content
+      content: downloadContent,
     });
   }
 
@@ -32,7 +32,9 @@ class BlogContent extends React.Component {
     return (
       <div className='RightContent'>
         <div className='Content'>
-          { this.state.contents.content }
+          <div dangerouslySetInnerHTML={{__html: this.state.content.content}}>
+
+          </div>
         </div>
       </div>
     )

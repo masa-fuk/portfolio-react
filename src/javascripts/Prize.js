@@ -13,7 +13,7 @@ class Prize extends React.Component {
           <div>
             <h2>OJT Manager</h2>
             <p>
-              e-zukaアプリコンテストで企業賞を受賞。
+              e-zukaスマートフォンアプリコンテストで企業賞を受賞。
             </p>
             <p>
               企業の研修の際に必ず行われる、OJT(On the Job Training)に着目し，進捗状況の確認や仕事の内容の確認などをワンストップで行うことができるようにしたもの。
