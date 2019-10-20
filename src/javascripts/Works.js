@@ -3,7 +3,7 @@ import '../css/RightContent.css';
 
 class Works extends React.Component {
   componentDidMount() {
-    this.props.contentname('Works');
+    this.props.contentName('Works');
   }
 
   render() {

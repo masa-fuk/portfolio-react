@@ -5,7 +5,7 @@ class LeftContent extends React.Component {
   render() {
     return (
       <div className="LeftContent">
-        <h1>{ this.props.titlename }</h1>
+        <h1>{ this.props.titleName }</h1>
       </div>
     )};
 }

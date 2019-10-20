@@ -3,7 +3,7 @@ import '../css/RightContent.css';
 
 class Contact extends React.Component {
   componentDidMount() {
-    this.props.contentname('Contact');
+    this.props.contentName('Contact');
   }
 
   render() {

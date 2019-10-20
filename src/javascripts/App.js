@@ -24,31 +24,31 @@ class App extends React.Component {
     <BrowserRouter>
       <div className='App'>
         <LeftContent
-          titlename={ this.state.leftTitleName }
+          titleName={ this.state.leftTitleName }
         />
         <Route
           exact path='/'
-          render={()=> <TopRightContent contentname={ this.onChangeName }/>}
+          render={()=> <TopRightContent contentName={ this.onChangeName }/>}
         />
         <Route
           path='/about'
-          render={()=> <About contentname={ this.onChangeName }/>}
+          render={()=> <About contentName={ this.onChangeName }/>}
         />
         <Route
           path='/works'
-          render={()=> <Works contentname={ this.onChangeName }/>}
+          render={()=> <Works contentName={ this.onChangeName }/>}
         />
         <Route
           path='/prize'
-          render={()=> <Prize contentname={ this.onChangeName }/>}
+          render={()=> <Prize contentName={ this.onChangeName }/>}
         />
         <Route
           path='/blog'
-          render={()=> <Blog contentname={ this.onChangeName } app={ this.state.firebaseapps }/>}
+          render={()=> <Blog contentName={ this.onChangeName } app={ this.state.firebaseapps }/>}
         />
         <Route
           path='/contact'
-          render={()=> <Contact contentname={ this.onChangeName }/>}
+          render={()=> <Contact contentName={ this.onChangeName }/>}
         />
       </div>
     </BrowserRouter>

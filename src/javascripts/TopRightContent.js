@@ -4,7 +4,7 @@ import '../css/RightContent.css';
 
 class TopRightContent extends React.Component {
   componentDidMount() {
-    this.props.contentname('Masahiro OKAZAKI');
+    this.props.contentName('Masahiro OKAZAKI');
   }
 
   render() {

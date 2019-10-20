@@ -12,16 +12,16 @@ class BlogList extends React.Component {
           { Object.keys(this.props.contents).map((item) =>
             <div key={item}>
               <Link to={ `/blog/content/${item}` }>
-              <Card>
-                <CardContent>
-                  <Typography>
-                    { this.props.contents[item].date }
-                  </Typography>
-                  <Typography variant='h4'>
-                    { this.props.contents[item].title }
-                  </Typography>
-                </CardContent>
-              </Card>
+                <Card>
+                  <CardContent>
+                    <Typography>
+                      { this.props.contents[item].date }
+                    </Typography>
+                    <Typography variant='h4'>
+                      { this.props.contents[item].title }
+                    </Typography>
+                  </CardContent>
+                </Card>
               </Link>
             </div>
           ) }

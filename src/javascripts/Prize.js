@@ -3,7 +3,7 @@ import '../css/RightContent.css';
 
 class Prize extends React.Component {
   componentDidMount() {
-    this.props.contentname('Prize');
+    this.props.contentName('Prize');
   }
 
   render() {

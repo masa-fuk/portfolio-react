@@ -15,7 +15,7 @@ class Blog extends React.Component {
   }
 
   componentDidMount() {
-    this.props.contentname('Blog');
+    this.props.contentName('Blog');
     this.getFlamelinkData();
   }
 
